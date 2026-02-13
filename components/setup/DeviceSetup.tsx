@@ -144,8 +144,8 @@ export function DeviceSetup({
                       ? "Custom Device"
                       : selectedDevice
                         ? filteredDevices.find(
-                            (d) => d.value === selectedDevice,
-                          )?.label
+                          (d) => d.value === selectedDevice,
+                        )?.label
                         : "Select your device"}
                   </span>
                   <ChevronsUpDownIcon className="ml-2 h-4 w-4 shrink-0 opacity-50" />
@@ -564,8 +564,7 @@ export function DeviceSetup({
                   </>
                 ) : (
                   <>
-                    Use the <strong>exact same folder and filename</strong> in
-                    both actions.
+                    Use any folder and filename you prefer,<strong> but make sure both actions use the exact same path.</strong>
                   </>
                 )}
               </p>
