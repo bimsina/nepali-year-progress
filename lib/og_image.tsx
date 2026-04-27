@@ -24,6 +24,15 @@ export type OgGridResult = {
   };
 };
 
+export type OgRenderOptions = {
+  backgroundImageUrl?: string;
+  overlayAlpha?: number;
+};
+
+export type OgTextOptions = {
+  handleText?: string;
+};
+
 export function parseDimensionsFromRequestUrl(requestUrl: string): {
   width: number;
   height: number;
@@ -35,7 +44,7 @@ export function parseDimensionsFromRequestUrl(requestUrl: string): {
     10,
   );
 
-  if (isNaN(width) || isNaN(height) || width <= 0 || height <= 0) {
+  if (Number.isNaN(width) || Number.isNaN(height) || width <= 0 || height <= 0) {
     return null;
   }
 
@@ -47,6 +56,32 @@ export function invalidDimensionsResponse() {
     status: 400,
     headers: { "Content-Type": "application/json" },
   });
+}
+
+export function parseOgRenderOptionsFromRequestUrl(
+  requestUrl: string,
+): OgRenderOptions {
+  const { searchParams } = new URL(requestUrl);
+  const backgroundImageUrl = searchParams.get("backgroundImageUrl")?.trim();
+  const overlayAlphaParam = searchParams.get("overlayAlpha");
+  const overlayAlpha = overlayAlphaParam ? Number(overlayAlphaParam) : undefined;
+
+  return {
+    backgroundImageUrl: backgroundImageUrl || undefined,
+    overlayAlpha:
+      overlayAlpha !== undefined && Number.isFinite(overlayAlpha)
+        ? Math.min(1, Math.max(0, overlayAlpha))
+        : undefined,
+  };
+}
+
+export function parseOgTextOptionsFromRequestUrl(requestUrl: string): OgTextOptions {
+  const { searchParams } = new URL(requestUrl);
+  const handleText = searchParams.get("handleText")?.trim();
+
+  return {
+    handleText: handleText || undefined,
+  };
 }
 
 export function getCurrentDateInNepal() {
@@ -68,21 +103,69 @@ export function createOgImageResponse(
   width: number,
   height: number,
   secondsUntilMidnight: number,
+  options?: OgRenderOptions,
 ) {
+  const backgroundImageUrl = options?.backgroundImageUrl;
+  const overlayAlpha = options?.overlayAlpha ?? (backgroundImageUrl ? 0.35 : 0);
+
   return new ImageResponse(
     <div
       style={{
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        position: "relative",
         width: "100%",
         height: "100%",
         backgroundColor: "#1a1a1a",
-        paddingTop: `${gridResult.paddingValues.top}px`,
-        paddingBottom: `${gridResult.paddingValues.bottom}px`,
+        overflow: "hidden",
       }}
     >
-      {renderOgElement(gridResult.grid)}
+      {backgroundImageUrl ? (
+        <img
+          src={backgroundImageUrl}
+          alt=""
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            objectPosition: "center",
+          }}
+        />
+      ) : null}
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          width: "100%",
+          height: "100%",
+          backgroundColor: `rgba(0, 0, 0, ${overlayAlpha})`,
+          zIndex: 1,
+        }}
+      />
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          position: "relative",
+          zIndex: 2,
+          width: "100%",
+          height: "100%",
+          paddingTop: `${gridResult.paddingValues.top}px`,
+          paddingBottom: `${gridResult.paddingValues.bottom}px`,
+        }}
+      >
+        {renderOgElement(gridResult.grid)}
+      </div>
     </div>,
     {
       width,
