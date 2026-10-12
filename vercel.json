@@ -1,0 +1,13 @@
+{
+  "framework": null,
+  "installCommand": "echo skip",
+  "buildCommand": "echo skip",
+  "outputDirectory": "public",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "destination": "https://nepali-year-progress.bimsina.dev/:path*",
+      "permanent": true
+    }
+  ]
+}
