@@ -1,6 +1,5 @@
 import { devices } from "@/lib/devices";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import Image from "next/image";
 
 export function DevTestView() {
   const iosDevices = devices.filter((d) => d.platform === "ios");
@@ -34,7 +33,7 @@ export function DevTestView() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="p-4 bg-muted/20">
-                  <Image
+                  <img
                     src={`/api/days?width=${device.width}&height=${device.height}`}
                     alt={`${device.label} Days`}
                     width={device.width}
@@ -56,7 +55,7 @@ export function DevTestView() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="p-4 bg-muted/20">
-                  <Image
+                  <img
                     src={`/api/months?width=${device.width}&height=${device.height}`}
                     alt={`${device.label} Months`}
                     width={device.width}
@@ -78,7 +77,7 @@ export function DevTestView() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="p-4 bg-muted/20">
-                  <Image
+                  <img
                     src={`/api/current-month?width=${device.width}&height=${device.height}`}
                     alt={`${device.label} Current Month`}
                     width={device.width}

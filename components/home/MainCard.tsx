@@ -8,7 +8,7 @@ import {
   CardDescription,
 } from "../ui/card";
 import { Calendar, CalendarDays, LayoutGrid } from "lucide-react";
-import Image, { StaticImageData } from "next/image";
+
 import days from "@/assets/days.png";
 import months from "@/assets/months.png";
 import currentMonth from "@/assets/current_month.png";
@@ -21,7 +21,7 @@ interface MainCardProps {
 const items: {
   title: string;
   description: string;
-  image: StaticImageData;
+  image: string;
   type: WallpaperType;
   icon: React.ReactNode;
 }[] = [
@@ -60,7 +60,7 @@ export function MainCard({ onOpenSetup }: MainCardProps) {
             <CardDescription>{item.description}</CardDescription>
           </CardHeader>
           <CardContent className="flex-1 flex items-center justify-center bg-[#1a1a1a] rounded-lg mt-0 overflow-hidden">
-            <Image
+            <img
               src={item.image}
               alt={`${item.title} Preview`}
               className="object-scale-down h-[400px] hover:scale-105 transition-transform duration-500"

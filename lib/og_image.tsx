@@ -1,4 +1,4 @@
-import { ImageResponse } from "@vercel/og";
+import { ImageResponse } from "@cf-wasm/og/workerd";
 
 const DEFAULT_WIDTH = 1170;
 const DEFAULT_HEIGHT = 2532;
@@ -69,7 +69,7 @@ export function createOgImageResponse(
   height: number,
   secondsUntilMidnight: number,
 ) {
-  return new ImageResponse(
+  return ImageResponse.async(
     <div
       style={{
         display: "flex",
@@ -157,4 +157,25 @@ function renderOgChildren(children: unknown): React.ReactNode {
   }
 
   return null;
+}
+
+// Workers responses aren't cached by the CDN automatically, so store generated
+// images in the Cloudflare Cache API until Nepal midnight (honours s-maxage).
+export async function withEdgeCache(
+  request: Request,
+  generate: () => Promise<Response>,
+) {
+  const cache =
+    typeof caches !== "undefined"
+      ? (caches as unknown as { default?: Cache }).default
+      : undefined;
+  if (!cache || request.method !== "GET") return generate();
+
+  const cacheKey = new Request(request.url, { method: "GET" });
+  const cached = await cache.match(cacheKey);
+  if (cached) return cached;
+
+  const response = await generate();
+  if (response.ok) await cache.put(cacheKey, response.clone());
+  return response;
 }

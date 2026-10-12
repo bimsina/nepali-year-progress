@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "nepali-year-progress",
+  "compatibility_date": "2026-10-12",
+  "compatibility_flags": ["nodejs_compat"],
+  "main": "@tanstack/react-start/server-entry",
+  "routes": [
+    { "pattern": "nepali-year-progress.bimsina.dev", "custom_domain": true }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}

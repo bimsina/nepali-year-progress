@@ -36,5 +36,8 @@ lerna-debug.log*
 !.dev.vars.example
 !.env.example
 
-.next
+.tanstack
+.output
+.vinxi
+worker-configuration.d.ts
 *.tsbuildinfo

@@ -1,5 +1,5 @@
-"use client";
 
+import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { devices } from "@/lib/devices";
 import { MainCard, Footer, Header } from "@/components/home";
@@ -10,7 +10,11 @@ import { type Platform, type WallpaperType } from "@/lib/types";
 
 type Step = "platform" | "setup";
 
-export default function Page() {
+export const Route = createFileRoute("/")({
+  component: Page,
+});
+
+function Page() {
   const [dialogOpen, setDialogOpen] = useState(false);
   const [step, setStep] = useState<Step>("platform");
   const [platform, setPlatform] = useState<Platform | null>(null);
@@ -54,7 +58,7 @@ export default function Page() {
 
       <Toaster />
 
-      {process.env.NODE_ENV === "development" && <DevTestView />}
+      {import.meta.env.DEV && <DevTestView />}
     </div>
   );
 }
