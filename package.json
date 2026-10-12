@@ -56,5 +56,6 @@
     "vite": "^8.3.4",
     "wrangler": "^4.149.0"
   },
-  "type": "module"
+  "type": "module",
+  "packageManager": "pnpm@12.11.2"
 }
