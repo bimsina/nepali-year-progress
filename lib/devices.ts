@@ -69,9 +69,15 @@ export const devices: DeviceSpec[] = [
         platform: "ios"
     }, {
         value: "iphone_duo",
-        label: "iPhone Duo (inner display)",
+        label: "iPhone Duo (main screen)",
         height: 2670,
         width: 1878,
+        platform: "ios"
+    }, {
+        value: "iphone_duo_cover",
+        label: "iPhone Duo (cover screen)",
+        height: 2034,
+        width: 1398,
         platform: "ios"
     },
 
@@ -588,87 +594,171 @@ export const devices: DeviceSpec[] = [
         platform: "android"
     }, {
         value: "samsung_galaxy_z_fold2",
-        label: "Samsung Galaxy Z Fold2",
+        label: "Samsung Galaxy Z Fold2 (main screen)",
         height: 2208,
         width: 1768,
+        platform: "android"
+    }, {
+        value: "samsung_galaxy_z_fold2_cover",
+        label: "Samsung Galaxy Z Fold2 (cover screen)",
+        height: 2260,
+        width: 816,
         platform: "android"
     }, {
         value: "samsung_galaxy_z_fold3",
-        label: "Samsung Galaxy Z Fold3",
+        label: "Samsung Galaxy Z Fold3 (main screen)",
         height: 2208,
         width: 1768,
         platform: "android"
     }, {
+        value: "samsung_galaxy_z_fold3_cover",
+        label: "Samsung Galaxy Z Fold3 (cover screen)",
+        height: 2268,
+        width: 832,
+        platform: "android"
+    }, {
         value: "samsung_galaxy_z_fold4",
-        label: "Samsung Galaxy Z Fold4",
+        label: "Samsung Galaxy Z Fold4 (main screen)",
         height: 2176,
         width: 1812,
+        platform: "android"
+    }, {
+        value: "samsung_galaxy_z_fold4_cover",
+        label: "Samsung Galaxy Z Fold4 (cover screen)",
+        height: 2316,
+        width: 904,
         platform: "android"
     }, {
         value: "samsung_galaxy_z_fold5",
-        label: "Samsung Galaxy Z Fold5",
+        label: "Samsung Galaxy Z Fold5 (main screen)",
         height: 2176,
         width: 1812,
         platform: "android"
     }, {
+        value: "samsung_galaxy_z_fold5_cover",
+        label: "Samsung Galaxy Z Fold5 (cover screen)",
+        height: 2316,
+        width: 904,
+        platform: "android"
+    }, {
         value: "samsung_galaxy_z_fold6",
-        label: "Samsung Galaxy Z Fold6",
+        label: "Samsung Galaxy Z Fold6 (main screen)",
         height: 2160,
         width: 1856,
         platform: "android"
     }, {
+        value: "samsung_galaxy_z_fold6_cover",
+        label: "Samsung Galaxy Z Fold6 (cover screen)",
+        height: 2376,
+        width: 968,
+        platform: "android"
+    }, {
         value: "samsung_galaxy_z_fold7",
-        label: "Samsung Galaxy Z Fold7",
+        label: "Samsung Galaxy Z Fold7 (main screen)",
         height: 2184,
         width: 1968,
         platform: "android"
     }, {
+        value: "samsung_galaxy_z_fold7_cover",
+        label: "Samsung Galaxy Z Fold7 (cover screen)",
+        height: 2520,
+        width: 1080,
+        platform: "android"
+    }, {
         value: "samsung_galaxy_z_fold8",
-        label: "Samsung Galaxy Z Fold8",
+        label: "Samsung Galaxy Z Fold8 (main screen)",
         height: 2448,
         width: 1848,
         platform: "android"
     }, {
+        value: "samsung_galaxy_z_fold8_cover",
+        label: "Samsung Galaxy Z Fold8 (cover screen)",
+        height: 1972,
+        width: 1248,
+        platform: "android"
+    }, {
         value: "samsung_galaxy_z_fold8_ultra",
-        label: "Samsung Galaxy Z Fold8 Ultra",
+        label: "Samsung Galaxy Z Fold8 Ultra (main screen)",
         height: 2504,
         width: 2256,
         platform: "android"
     }, {
+        value: "samsung_galaxy_z_fold8_ultra_cover",
+        label: "Samsung Galaxy Z Fold8 Ultra (cover screen)",
+        height: 2520,
+        width: 1080,
+        platform: "android"
+    }, {
         value: "samsung_galaxy_z_flip3",
-        label: "Samsung Galaxy Z Flip3",
+        label: "Samsung Galaxy Z Flip3 (main screen)",
         height: 2640,
         width: 1080,
+        platform: "android"
+    }, {
+        value: "samsung_galaxy_z_flip3_cover",
+        label: "Samsung Galaxy Z Flip3 (cover screen)",
+        height: 512,
+        width: 260,
         platform: "android"
     }, {
         value: "samsung_galaxy_z_flip4",
-        label: "Samsung Galaxy Z Flip4",
+        label: "Samsung Galaxy Z Flip4 (main screen)",
         height: 2640,
         width: 1080,
+        platform: "android"
+    }, {
+        value: "samsung_galaxy_z_flip4_cover",
+        label: "Samsung Galaxy Z Flip4 (cover screen)",
+        height: 512,
+        width: 260,
         platform: "android"
     }, {
         value: "samsung_galaxy_z_flip5",
-        label: "Samsung Galaxy Z Flip5",
+        label: "Samsung Galaxy Z Flip5 (main screen)",
         height: 2640,
         width: 1080,
+        platform: "android"
+    }, {
+        value: "samsung_galaxy_z_flip5_cover",
+        label: "Samsung Galaxy Z Flip5 (cover screen)",
+        height: 748,
+        width: 720,
         platform: "android"
     }, {
         value: "samsung_galaxy_z_flip6",
-        label: "Samsung Galaxy Z Flip6",
+        label: "Samsung Galaxy Z Flip6 (main screen)",
         height: 2640,
         width: 1080,
         platform: "android"
     }, {
+        value: "samsung_galaxy_z_flip6_cover",
+        label: "Samsung Galaxy Z Flip6 (cover screen)",
+        height: 748,
+        width: 720,
+        platform: "android"
+    }, {
         value: "samsung_galaxy_z_flip7",
-        label: "Samsung Galaxy Z Flip7",
+        label: "Samsung Galaxy Z Flip7 (main screen)",
         height: 2520,
         width: 1080,
         platform: "android"
     }, {
+        value: "samsung_galaxy_z_flip7_cover",
+        label: "Samsung Galaxy Z Flip7 (cover screen)",
+        height: 1048,
+        width: 948,
+        platform: "android"
+    }, {
         value: "samsung_galaxy_z_flip8",
-        label: "Samsung Galaxy Z Flip8",
+        label: "Samsung Galaxy Z Flip8 (main screen)",
         height: 2520,
         width: 1080,
+        platform: "android"
+    }, {
+        value: "samsung_galaxy_z_flip8_cover",
+        label: "Samsung Galaxy Z Flip8 (cover screen)",
+        height: 1048,
+        width: 948,
         platform: "android"
     }, {
         value: "samsung_galaxy_note10",
@@ -1788,15 +1878,51 @@ export const devices: DeviceSpec[] = [
         platform: "android"
     }, {
         value: "oppo_find_n2",
-        label: "Oppo Find N2 / N2 Flip",
+        label: "Oppo Find N2 Flip (main screen)",
         height: 2520,
         width: 1080,
         platform: "android"
     }, {
+        value: "oppo_find_n2_flip_cover",
+        label: "Oppo Find N2 Flip (cover screen)",
+        height: 720,
+        width: 382,
+        platform: "android"
+    }, {
+        value: "oppo_find_n2_main",
+        label: "Oppo Find N2 (main screen)",
+        height: 1920,
+        width: 1792,
+        platform: "android"
+    }, {
+        value: "oppo_find_n2_cover",
+        label: "Oppo Find N2 (cover screen)",
+        height: 2120,
+        width: 1080,
+        platform: "android"
+    }, {
         value: "oppo_find_n3",
-        label: "Oppo Find N3 / N3 Flip",
+        label: "Oppo Find N3 (main screen)",
+        height: 2440,
+        width: 2268,
+        platform: "android"
+    }, {
+        value: "oppo_find_n3_cover",
+        label: "Oppo Find N3 (cover screen)",
         height: 2484,
         width: 1116,
+        platform: "android"
+    }, {
+        value: "oppo_find_n3_flip_main",
+        label: "Oppo Find N3 Flip (main screen)",
+        height: 2520,
+        width: 1080,
+        platform: "android"
+    }, {
+        value: "oppo_find_n3_flip_cover",
+        label: "Oppo Find N3 Flip (cover screen)",
+        height: 720,
+        width: 382,
         platform: "android"
     }, {
         value: "realme_c11",
@@ -2244,15 +2370,27 @@ export const devices: DeviceSpec[] = [
         platform: "android"
     }, {
         value: "google_pixel_fold",
-        label: "Google Pixel Fold",
+        label: "Google Pixel Fold (main screen)",
         height: 2208,
         width: 1840,
         platform: "android"
     }, {
+        value: "google_pixel_fold_cover",
+        label: "Google Pixel Fold (cover screen)",
+        height: 2092,
+        width: 1080,
+        platform: "android"
+    }, {
         value: "google_pixel_9_pro_fold",
-        label: "Google Pixel 9 Pro Fold",
+        label: "Google Pixel 9 Pro Fold (main screen)",
         height: 2152,
         width: 1840,
+        platform: "android"
+    }, {
+        value: "google_pixel_9_pro_fold_cover",
+        label: "Google Pixel 9 Pro Fold (cover screen)",
+        height: 2424,
+        width: 1080,
         platform: "android"
     }, {
         value: "oneplus_6",
@@ -2454,9 +2592,15 @@ export const devices: DeviceSpec[] = [
         platform: "android"
     }, {
         value: "oneplus_open",
-        label: "OnePlus Open",
+        label: "OnePlus Open (main screen)",
         height: 2484,
         width: 2268,
+        platform: "android"
+    }, {
+        value: "oneplus_open_cover",
+        label: "OnePlus Open (cover screen)",
+        height: 2484,
+        width: 1116,
         platform: "android"
     }, {
         value: "moto_g_power",
@@ -2676,38 +2820,80 @@ export const devices: DeviceSpec[] = [
         platform: "android"
     }, {
         value: "moto_razr_2022",
-        label: "Motorola Razr (2022)",
+        label: "Motorola Razr (2022) (main screen)",
         height: 2640,
         width: 1080,
+        platform: "android"
+    }, {
+        value: "motorola_razr_2022_cover",
+        label: "Motorola Razr (2022) (cover screen)",
+        height: 573,
+        width: 800,
         platform: "android"
     }, {
         value: "moto_razr_2023",
-        label: "Motorola Razr (2023)",
+        label: "Motorola Razr (2023) (main screen)",
         height: 2640,
         width: 1080,
+        platform: "android"
+    }, {
+        value: "motorola_razr_2023_cover",
+        label: "Motorola Razr (2023) (cover screen)",
+        height: 368,
+        width: 194,
         platform: "android"
     }, {
         value: "moto_razr_plus",
-        label: "Motorola Razr+ (2023)",
+        label: "Motorola Razr+ (2023) (main screen)",
         height: 2640,
         width: 1080,
+        platform: "android"
+    }, {
+        value: "motorola_razr_plus_2023_cover",
+        label: "Motorola Razr+ (2023) (cover screen)",
+        height: 1066,
+        width: 1056,
         platform: "android"
     }, {
         value: "moto_razr_40",
-        label: "Motorola Razr 40",
+        label: "Motorola Razr 40 (main screen)",
         height: 2640,
         width: 1080,
+        platform: "android"
+    }, {
+        value: "motorola_razr_40_cover",
+        label: "Motorola Razr 40 (cover screen)",
+        height: 368,
+        width: 194,
         platform: "android"
     }, {
         value: "moto_razr_40_ultra",
-        label: "Motorola Razr 40 Ultra",
+        label: "Motorola Razr 40 Ultra (main screen)",
         height: 2640,
         width: 1080,
         platform: "android"
     }, {
+        value: "motorola_razr_40_ultra_cover",
+        label: "Motorola Razr 40 Ultra (cover screen)",
+        height: 1066,
+        width: 1056,
+        platform: "android"
+    }, {
         value: "moto_razr_50",
-        label: "Motorola Razr 50 / 50 Ultra",
+        label: "Motorola Razr 50 / 50 Ultra (main screen)",
         height: 2640,
+        width: 1080,
+        platform: "android"
+    }, {
+        value: "motorola_razr_50_cover",
+        label: "Motorola Razr 50 (cover screen)",
+        height: 1066,
+        width: 1056,
+        platform: "android"
+    }, {
+        value: "motorola_razr_50_ultra_cover",
+        label: "Motorola Razr 50 Ultra (cover screen)",
+        height: 1272,
         width: 1080,
         platform: "android"
     }, {
@@ -2772,15 +2958,27 @@ export const devices: DeviceSpec[] = [
         platform: "android"
     }, {
         value: "huawei_mate_x3",
-        label: "Huawei Mate X3",
+        label: "Huawei Mate X3 (main screen)",
         height: 2504,
         width: 2224,
         platform: "android"
     }, {
+        value: "huawei_mate_x3_cover",
+        label: "Huawei Mate X3 (cover screen)",
+        height: 2504,
+        width: 1080,
+        platform: "android"
+    }, {
         value: "huawei_mate_x5",
-        label: "Huawei Mate X5",
+        label: "Huawei Mate X5 (main screen)",
         height: 2504,
         width: 2224,
+        platform: "android"
+    }, {
+        value: "huawei_mate_x5_cover",
+        label: "Huawei Mate X5 (cover screen)",
+        height: 2504,
+        width: 1080,
         platform: "android"
     }, {
         value: "huawei_nova_9",
@@ -2916,21 +3114,45 @@ export const devices: DeviceSpec[] = [
         platform: "android"
     }, {
         value: "honor_magic_v",
-        label: "Honor Magic V / V2",
+        label: "Honor Magic V / V2 (main screen)",
         height: 2272,
         width: 2156,
         platform: "android"
     }, {
+        value: "honor_magic_v_cover",
+        label: "Honor Magic V (cover screen)",
+        height: 2560,
+        width: 1080,
+        platform: "android"
+    }, {
+        value: "honor_magic_v2_cover",
+        label: "Honor Magic V2 (cover screen)",
+        height: 2376,
+        width: 1060,
+        platform: "android"
+    }, {
         value: "honor_magic_v3",
-        label: "Honor Magic V3",
+        label: "Honor Magic V3 (main screen)",
         height: 2344,
         width: 2156,
         platform: "android"
     }, {
+        value: "honor_magic_v3_cover",
+        label: "Honor Magic V3 (cover screen)",
+        height: 2376,
+        width: 1060,
+        platform: "android"
+    }, {
         value: "honor_magic_vs",
-        label: "Honor Magic Vs",
+        label: "Honor Magic Vs (main screen)",
         height: 2272,
         width: 1984,
+        platform: "android"
+    }, {
+        value: "honor_magic_vs_cover",
+        label: "Honor Magic Vs (cover screen)",
+        height: 2560,
+        width: 1080,
         platform: "android"
     }, {
         value: "honor_x6",
@@ -3060,15 +3282,27 @@ export const devices: DeviceSpec[] = [
         platform: "android"
     }, {
         value: "tecno_phantom_v_fold",
-        label: "Tecno Phantom V Fold",
+        label: "Tecno Phantom V Fold (main screen)",
         height: 2296,
         width: 2e3,
         platform: "android"
     }, {
+        value: "tecno_phantom_v_fold_cover",
+        label: "Tecno Phantom V Fold (cover screen)",
+        height: 2550,
+        width: 1080,
+        platform: "android"
+    }, {
         value: "tecno_phantom_v_flip",
-        label: "Tecno Phantom V Flip",
+        label: "Tecno Phantom V Flip (main screen)",
         height: 2640,
         width: 1080,
+        platform: "android"
+    }, {
+        value: "tecno_phantom_v_flip_cover",
+        label: "Tecno Phantom V Flip (cover screen)",
+        height: 466,
+        width: 466,
         platform: "android"
     }, {
         value: "infinix_note_11",

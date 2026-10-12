@@ -219,12 +219,24 @@ export function generateMonthsGridJSON(
     (screenHeight * BOTTOM_PADDING_PERCENT) / 100,
   );
 
-  const textHeight = Math.max(screenHeight * 0.05, 24);
-  const fontSize = Math.max(screenHeight * 0.015, 16);
-  const monthTitleFontSize = Math.max(screenHeight * 0.012, 14);
+  // Minimums keep phone wallpapers readable; the caps only kick in on small
+  // or squat screens (foldable cover screens) where they'd otherwise overlap.
+  const fontSize = Math.min(
+    Math.max(screenHeight * 0.015, 16),
+    screenHeight * 0.035,
+    screenWidth * 0.06,
+  );
+  const footerMarginTop = Math.min(16, fontSize);
+  const footerMarginBottom = Math.min(8, fontSize / 2);
+  const footerHeight = fontSize * 1.3 * 2 + footerMarginTop + footerMarginBottom;
+  const textHeight = Math.max(screenHeight * 0.05, 24, footerHeight);
 
   const availableHeight =
-    screenHeight - topPadding - bottomPadding - textHeight - 40;
+    screenHeight -
+    topPadding -
+    bottomPadding -
+    textHeight -
+    Math.min(40, screenHeight * 0.04);
   const availableWidth = screenWidth * 0.85;
 
   const monthCols = 3;
@@ -238,11 +250,24 @@ export function generateMonthsGridJSON(
     (availableHeight - monthGap * (monthRows - 1)) / monthRows,
   );
 
+  const monthTitleFontSize = Math.min(
+    Math.max(screenHeight * 0.012, 14),
+    monthHeight * 0.12,
+    monthWidth * 0.16,
+  );
+  const monthTitleGap = Math.min(16, monthHeight * 0.06);
+  const monthTitleHeight = monthTitleFontSize * 1.3 + monthTitleGap;
+
   const dayCols = 7;
   const dayRows = 5;
+  // A month can start late in the week and spill onto a sixth row.
+  const maxDayRows = 6;
 
   const dayCellWidth = monthWidth / dayCols;
-  const dayCellHeight = (monthHeight * 0.75) / dayRows;
+  const dayCellHeight = Math.min(
+    (monthHeight * 0.75) / dayRows,
+    (monthHeight + monthGap / 2 - monthTitleHeight) / maxDayRows,
+  );
 
   const dayCellSize = Math.floor(Math.min(dayCellWidth, dayCellHeight));
   const dotSize = Math.floor(dayCellSize * 0.5);
@@ -322,7 +347,7 @@ export function generateMonthsGridJSON(
                 color: "gray",
                 fontSize: `${monthTitleFontSize}px`,
                 fontFamily: "system-ui, -apple-system, sans-serif",
-                marginBottom: "16px",
+                marginBottom: `${monthTitleGap}px`,
                 width: `${7 * (dotSize + 2 * dotMargin)}px`,
                 textAlign: "left",
                 paddingLeft: `${dotMargin}px`,
@@ -358,7 +383,7 @@ export function generateMonthsGridJSON(
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        marginBottom: "8px",
+        marginBottom: `${footerMarginBottom}px`,
         width: "100%",
       },
       children: {
@@ -384,7 +409,7 @@ export function generateMonthsGridJSON(
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        marginTop: "16px",
+        marginTop: `${footerMarginTop}px`,
         width: "100%",
       },
       children: {
