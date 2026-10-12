@@ -9,7 +9,7 @@ export const devices: DeviceSpec[] = [
         platform: "ios"
     }, {
         value: "iphone_13",
-        label: "iPhone 13 / 13 Pro / 14 / 14 Pro",
+        label: "iPhone 13 / 13 Pro / 14 / 14 Pro / 16e / 17e",
         height: 2532,
         width: 1170,
         platform: "ios"
@@ -46,20 +46,32 @@ export const devices: DeviceSpec[] = [
     }, {
         value: "iphone_17",
         label: "iPhone 17",
-        height: 2556,
-        width: 1179,
+        height: 2622,
+        width: 1206,
         platform: "ios"
     }, {
         value: "iphone_17_pro",
-        label: "iPhone 17 Pro",
+        label: "iPhone 17 Pro / 18 Pro",
         height: 2622,
         width: 1206,
         platform: "ios"
     }, {
         value: "iphone_17_pro_max",
-        label: "iPhone 17 Pro Max",
+        label: "iPhone 17 Pro Max / 18 Pro Max",
         height: 2868,
         width: 1320,
+        platform: "ios"
+    }, {
+        value: "iphone_air",
+        label: "iPhone Air",
+        height: 2736,
+        width: 1260,
+        platform: "ios"
+    }, {
+        value: "iphone_duo",
+        label: "iPhone Duo (inner display)",
+        height: 2670,
+        width: 1878,
         platform: "ios"
     },
 
@@ -103,6 +115,30 @@ export const devices: DeviceSpec[] = [
     }, {
         value: "samsung_galaxy_a17",
         label: "Samsung Galaxy A17 5G",
+        height: 2340,
+        width: 1080,
+        platform: "android"
+    }, {
+        value: "samsung_galaxy_a26_5g",
+        label: "Samsung Galaxy A26 5G",
+        height: 2340,
+        width: 1080,
+        platform: "android"
+    }, {
+        value: "samsung_galaxy_a36_5g",
+        label: "Samsung Galaxy A36 5G",
+        height: 2340,
+        width: 1080,
+        platform: "android"
+    }, {
+        value: "samsung_galaxy_a56_5g",
+        label: "Samsung Galaxy A56 5G",
+        height: 2340,
+        width: 1080,
+        platform: "android"
+    }, {
+        value: "samsung_galaxy_a57",
+        label: "Samsung Galaxy A57",
         height: 2340,
         width: 1080,
         platform: "android"
@@ -377,6 +413,36 @@ export const devices: DeviceSpec[] = [
         width: 1440,
         platform: "android"
     }, {
+        value: "samsung_galaxy_s25_fe",
+        label: "Samsung Galaxy S25 FE",
+        height: 2340,
+        width: 1080,
+        platform: "android"
+    }, {
+        value: "samsung_galaxy_s25_edge",
+        label: "Samsung Galaxy S25 Edge",
+        height: 3120,
+        width: 1440,
+        platform: "android"
+    }, {
+        value: "samsung_galaxy_s26",
+        label: "Samsung Galaxy S26",
+        height: 2340,
+        width: 1080,
+        platform: "android"
+    }, {
+        value: "samsung_galaxy_s26_plus",
+        label: "Samsung Galaxy S26+",
+        height: 3120,
+        width: 1440,
+        platform: "android"
+    }, {
+        value: "samsung_galaxy_s26_ultra",
+        label: "Samsung Galaxy S26 Ultra",
+        height: 3120,
+        width: 1440,
+        platform: "android"
+    }, {
         value: "samsung_galaxy_m12",
         label: "Samsung Galaxy M12",
         height: 1600,
@@ -551,6 +617,24 @@ export const devices: DeviceSpec[] = [
         width: 1856,
         platform: "android"
     }, {
+        value: "samsung_galaxy_z_fold7",
+        label: "Samsung Galaxy Z Fold7",
+        height: 2184,
+        width: 1968,
+        platform: "android"
+    }, {
+        value: "samsung_galaxy_z_fold8",
+        label: "Samsung Galaxy Z Fold8",
+        height: 2448,
+        width: 1848,
+        platform: "android"
+    }, {
+        value: "samsung_galaxy_z_fold8_ultra",
+        label: "Samsung Galaxy Z Fold8 Ultra",
+        height: 2504,
+        width: 2256,
+        platform: "android"
+    }, {
         value: "samsung_galaxy_z_flip3",
         label: "Samsung Galaxy Z Flip3",
         height: 2640,
@@ -572,6 +656,18 @@ export const devices: DeviceSpec[] = [
         value: "samsung_galaxy_z_flip6",
         label: "Samsung Galaxy Z Flip6",
         height: 2640,
+        width: 1080,
+        platform: "android"
+    }, {
+        value: "samsung_galaxy_z_flip7",
+        label: "Samsung Galaxy Z Flip7",
+        height: 2520,
+        width: 1080,
+        platform: "android"
+    }, {
+        value: "samsung_galaxy_z_flip8",
+        label: "Samsung Galaxy Z Flip8",
+        height: 2520,
         width: 1080,
         platform: "android"
     }, {
@@ -903,6 +999,18 @@ export const devices: DeviceSpec[] = [
         label: "Xiaomi 15 Pro",
         height: 3200,
         width: 1440,
+        platform: "android"
+    }, {
+        value: "xiaomi_15_ultra",
+        label: "Xiaomi 15 Ultra",
+        height: 3200,
+        width: 1440,
+        platform: "android"
+    }, {
+        value: "xiaomi_17",
+        label: "Xiaomi 17",
+        height: 2656,
+        width: 1220,
         platform: "android"
     }, {
         value: "poco_c40",
@@ -2083,8 +2191,8 @@ export const devices: DeviceSpec[] = [
     }, {
         value: "google_pixel_9_pro_xl",
         label: "Google Pixel 9 Pro XL",
-        height: 3120,
-        width: 1440,
+        height: 2992,
+        width: 1344,
         platform: "android"
     }, {
         value: "google_pixel_9a",
@@ -2107,8 +2215,32 @@ export const devices: DeviceSpec[] = [
     }, {
         value: "google_pixel_10_pro_xl",
         label: "Google Pixel 10 Pro XL",
-        height: 3120,
-        width: 1440,
+        height: 2992,
+        width: 1344,
+        platform: "android"
+    }, {
+        value: "google_pixel_10a",
+        label: "Google Pixel 10a",
+        height: 2424,
+        width: 1080,
+        platform: "android"
+    }, {
+        value: "google_pixel_11",
+        label: "Google Pixel 11",
+        height: 2424,
+        width: 1080,
+        platform: "android"
+    }, {
+        value: "google_pixel_11_pro",
+        label: "Google Pixel 11 Pro",
+        height: 2856,
+        width: 1280,
+        platform: "android"
+    }, {
+        value: "google_pixel_11_pro_xl",
+        label: "Google Pixel 11 Pro XL",
+        height: 2992,
+        width: 1344,
         platform: "android"
     }, {
         value: "google_pixel_fold",
@@ -2229,6 +2361,12 @@ export const devices: DeviceSpec[] = [
         label: "OnePlus 13R",
         height: 2780,
         width: 1264,
+        platform: "android"
+    }, {
+        value: "oneplus_15",
+        label: "OnePlus 15",
+        height: 2772,
+        width: 1272,
         platform: "android"
     }, {
         value: "oneplus_nord",
@@ -3489,6 +3627,24 @@ export const devices: DeviceSpec[] = [
         label: "Nothing Phone (2a) Plus",
         height: 2412,
         width: 1084,
+        platform: "android"
+    }, {
+        value: "nothing_phone_3a",
+        label: "Nothing Phone (3a) / (3a) Pro",
+        height: 2392,
+        width: 1084,
+        platform: "android"
+    }, {
+        value: "nothing_phone_3",
+        label: "Nothing Phone (3)",
+        height: 2800,
+        width: 1260,
+        platform: "android"
+    }, {
+        value: "nothing_phone_4a",
+        label: "Nothing Phone (4a)",
+        height: 2720,
+        width: 1224,
         platform: "android"
     }, {
         value: "fairphone_4",
