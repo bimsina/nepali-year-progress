@@ -5,6 +5,11 @@
   "outputDirectory": "public",
   "redirects": [
     {
+      "source": "/",
+      "destination": "https://nepali-year-progress.bimsina.dev/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "destination": "https://nepali-year-progress.bimsina.dev/:path*",
       "permanent": true
